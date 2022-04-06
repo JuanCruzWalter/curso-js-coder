@@ -1,4 +1,4 @@
- let distancia = parseInt(prompt("ingrese distencia del envio en KM"))
+ let distancia = parseInt(prompt("ingrese distancia del envio en KM"))
  let precio = parseInt(prompt("ingrese precio del producto"))
  let cantidad = parseInt(prompt("ingrese cantidad del producto"))
  let envio

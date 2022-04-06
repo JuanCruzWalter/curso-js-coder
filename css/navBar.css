@@ -1,0 +1,24 @@
+.navBar{
+    width: 100vw;
+    height: 4rem;
+    background: rgb(0,47,87);
+    background: linear-gradient(335deg, rgba(0,47,87,1) 0%, rgba(0,16,34,1) 100%);
+    border-bottom: 1.5px solid #ffffff;
+    
+}
+
+.header__nav--btn{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: rgb(241, 244, 255);
+    border-style: none;
+    padding: 0.4rem 2.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #111138;
+}
+.header__nav--btn:hover{
+    background-color: rgb(200, 208, 238);
+}

@@ -1,0 +1,26 @@
+.main__contenido{
+    
+    font-family: sans-serif;
+    border-left-color: rgb(13, 12, 17);
+    font-weight: bold;
+    font-size: 2rem;
+    border-left: 1.3px solid rgb(255, 255, 255);
+    
+}
+
+.main__contenido--titulo{
+
+    background: rgb(2,91,159);
+    background: linear-gradient(335deg, rgba(2,91,159,1) 0%, rgba(0,38,70,1) 100%);
+    padding: 1rem 2rem;
+    color: aliceblue;
+    font-size: 1.5rem;
+    
+    
+    
+    
+}
+.main__contenido--titulo h2{
+    font-weight: 100;
+    text-align: center;
+}
