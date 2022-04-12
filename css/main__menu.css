@@ -2,19 +2,29 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
+    height: auto;
+    width: auto;
     
 }
+.main.main{
+    background-color: #001527;
+}
+
+
 
 .main__menuLateral{
-
-    background: url(../img/10.jpg);
     
-    height: calc(100vh - 4.1rem);
-    width: 100%;
-    background-color: #101316;
-    text-decoration: none;
+    /*background-color: #101316;
+    background: url(../img/31.webp);
+    background-repeat: repeat;*/
+    
+    background: rgb(0,47,87);
+    background: linear-gradient(0deg, rgba(0,47,87,1) 0%, rgba(0,16,34,1) 100%);
+    
     grid-column: 1/2;
-    
+    height: 100vh;
+    text-decoration: none;
+    padding-top: 5rem;
     
     
     
@@ -24,15 +34,16 @@
 .main__menuLateral--btn{
     background-color: #0000003f;
     margin: 0.5rem;
-    padding: 1.5rem;
+    padding: 0.8rem 1.4rem;
     border-radius:  5px;
-    border-bottom: 2px solid #dfdcdc18;
+    border-bottom: 2px solid #dcdddf18;
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 12px 0px;
-    color: #bbd1e9;
+    color: #aec8e4;
     width: 95%;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    
     
     
     
@@ -45,19 +56,15 @@
     background-color: #00000094;
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 2px 0px;
-    color: rgb(226, 239, 250);
+    color: #c4e0fd;
     font-size: 1.4rem;
-    padding: 1.45rem;
+    padding: 0.675rem 1.4rem;
 }
-    
 
-.main__contenido{
-    
-    
-    background-color: rgb(241, 244, 255);
-    grid-column: 2/6;
-    grid-row: 1/6;
-    color:#001527
-    
+.main__menuLateral--btn p{
+    font-size: 0.8rem;
+    color: white;
+    padding-left: 0rem;
 }
+
 
