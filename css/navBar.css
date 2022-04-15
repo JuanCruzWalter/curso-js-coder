@@ -2,7 +2,7 @@
     width: calc(100vw);
     height: 4rem;
     background: rgb(0,47,87);
-    background: linear-gradient(335deg, rgba(0,47,87,1) 0%, rgba(0,16,34,1) 100%);
+    background: linear-gradient(335deg, rgb(0, 33, 61) 0%, rgba(0,16,34,1) 100%);
     border-bottom: 1.5px solid #ffffff;
 
     

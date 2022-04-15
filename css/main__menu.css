@@ -25,6 +25,7 @@
     height: calc(100vh - 7rem);
     text-decoration: none;
     padding-top: 5rem;
+   
     
     
     
@@ -38,7 +39,7 @@
     border-radius:  5px;
     border-bottom: 2px solid #dcdddf18;
     backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 12px 0px;
+    box-shadow: 0px 0px 3px 0px;
     color: #aec8e4;
     width: 80%;
     text-align: left;
@@ -56,13 +57,17 @@
 
 
 .main__menuLateral--btn:hover{
+    box-shadow: 0px 0px 7px 0px;
+    transition: 50ms;
+
     background-color: #00000094;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 2px 0px;
+    backdrop-filter: blur(6px);
     color: #c4e0fd;
     font-size: 1.4rem;
     padding: 0.675rem 1.4rem;
+        
 }
+
 
 .main__menuLateral--btn p{
     font-size: 0.8rem;

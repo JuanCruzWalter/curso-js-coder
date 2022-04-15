@@ -5,7 +5,7 @@
     font-weight: bold;
     font-size: 2rem;
     border-left: 1.3px solid rgb(255, 255, 255);
-    background-color: rgb(209, 209, 211);
+    background: linear-gradient(335deg, rgb(231, 232, 241) 0%, rgb(216, 216, 216) 100%);
     grid-column: 2/6;
     grid-row: 1/6;
     color:#001527
@@ -18,11 +18,12 @@
 
     /* background: rgb(2,91,159);
     background: linear-gradient(335deg, rgba(2,91,159,1) 0%, rgba(0,38,70,1) 100%); */
-    background: rgb(209, 109, 16);
-    background: linear-gradient(335deg, rgba(230, 140, 23, 0.5) 0%, rgba(185, 84, 1, 0.7) 100%);
+    background: rgb(0, 7, 31);
+    background: linear-gradient(335deg, rgb(0, 24, 44) 0%, rgb(0, 12, 24) 100%);
     padding: 1rem 2rem;
-    color: rgb(5, 36, 63);
+    color: rgb(248, 252, 255);
     font-size: 1.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
     
     
     
