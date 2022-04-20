@@ -20,12 +20,22 @@ class Cliente{
         let borrar = false
         borrar = confirm("quiere borrar el cleinte que ingreso?")
         if (borrar == true){
-            listaClientes.pop(this.Cliente)
+            listaClientes.pop(this.Cliente);
         }
     }
-    
-    
+   
 }
+const agregarCliente = () => {
+    let id = document.getElementById(id).value;
+    let nombre = document.getElementById(nombre).value;
+    let apellido = document.getElementById(apellido).value;
+    let tieneCuentas = document.getElementById(tieneCuentas).value;
+    let direccion = document.getElementById(direccion).value;
+
+    let nuevoCliente = new Cliente (id, nombre, apellido, tieneCuentas, direccion);
+    listaClientes.push(nuevoCliente);
+}
+
 
 //creo 3 clientes y 1 por prompt. utilizo un metodo
 let cliente1 = new Cliente(2, "juan", "lopez", true, "ricchieri 2825");
@@ -79,4 +89,8 @@ console.log(listaClientes);
 //utiliso un metodo de clientes para borrar el que se agrega pr prompt
 cliente4.borrarCliente();
 
+
+//llamo la funcion pero no la puedo hacer funcionar
+
+agregarCliente();
 

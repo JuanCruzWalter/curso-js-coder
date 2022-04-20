@@ -12,7 +12,7 @@
 .header__nav--btn{
     margin-top: 1rem;
     margin-left: 1rem;
-    background-color: rgba(241, 244, 255, 0.151);
+    background-color: rgba(241, 244, 255, 0);
     border-style: none;
     padding: 0.4rem 2.5rem;
     border-radius: 3px;
@@ -22,10 +22,15 @@
     color: #ffffff;
     grid-column: 1/2;
     width: calc(20% - 2.5rem);
+    letter-spacing: 1px;
+    border: 1px solid #ffffff83;
 
 }
 .header__nav--btn:hover{
-    background-color: rgba(255, 255, 255, 0.658);
+    background-color: rgba(255, 255, 255, 0.6);
     color: rgb(0,47,87);
     font-weight: bolder;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    transition: 500ms;
 }

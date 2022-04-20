@@ -19,11 +19,12 @@
     /* background: rgb(2,91,159);
     background: linear-gradient(335deg, rgba(2,91,159,1) 0%, rgba(0,38,70,1) 100%); */
     background: rgb(0, 7, 31);
-    background: linear-gradient(335deg, rgb(0, 24, 44) 0%, rgb(0, 12, 24) 100%);
+    background: linear-gradient(335deg, rgb(0, 18, 32) 0%, rgb(0, 9, 18) 100%);
     padding: 1rem 2rem;
     color: rgb(248, 252, 255);
     font-size: 1.5rem;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    
     
     
     
@@ -34,4 +35,7 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+}
+.textForm{
+    font-size: 1rem;
 }
