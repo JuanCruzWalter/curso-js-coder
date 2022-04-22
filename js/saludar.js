@@ -13,13 +13,22 @@ class ProductoPruba{
 
 }
 
-const agregarProductoPrueba = () =>{
+const agregarProductoPrueba = () =>{ 
     let nombre = document.getElementById("nombre1").value;
     let precio = document.getElementById("precio1").value;
     let detalle = document.getElementById("detalle1").value;
 
     let nuevoProductoPrueba = new ProductoPruba (nombre, precio, detalle);
     listaProductosPrueba.push(nuevoProductoPrueba);
+    console.log(listaProductosPrueba);
     
 }
-agregarProductoPrueba();
+let form = document.getElementById("form")
+const enviar = document.getElementById("enviar1")
+enviar.onclick = (e) => {
+    e.preventDefault();
+    agregarProductoPrueba();
+    form.reset();
+    
+}
+    

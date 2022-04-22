@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/main__menu.css">
     <link rel="stylesheet" href="../css/navBar.css">
     <link rel="stylesheet" href="../css/main__contenido.css">
+    <link rel="stylesheet" href="../css/clientes.css">
     
     
     
@@ -50,23 +51,24 @@
                 </h2>
                 
             </section>
-            <section>
-                <form action="">
+            <section class="contenedor__formClientes">
+                <form action="" id="formClientes">
                     <h3>agregar clientes</h3>
                     <br>
                     <br>
-                    <p class="textForm">ingresa un nuevo id decliente</p>
-                    <input type="text" id="id"><br>
-                    <p class="textForm">ingresa nombre del nuevo id decliente</p>
-                    <input type="text" id="nombre"><br>
-                    <p class="textForm">ingresa apellido del nuevo id decliente</p>
-                    <input type="text" id="apellido"><br>
-                    <p class="textForm">tiene cuenta corriente</p>
-                    <input type="text" id="tieneCuentas"><br>
-                    <p class="textForm">ingresa direccion del cliente</p>
-                    <input type="text" id="direccion"><br>
-                    <input type="submit">
+                    
+                    <input type="text" class="formInput" id="id" placeholder=" ingresa un nuevo id para el cliente"><br>
+                    <input type="text" class="formInput" id="nombre" placeholder="ingresa nombre del nuevo cliente"><br>
+                    <input type="text" class="formInput" id="apellido" placeholder=" ingresa apellido del nuevo cliente"><br>
+                    <input type="text" class="formInput" id="tieneCuentas" placeholder="tiene cuenta corriente?"><br>
+                    <input type="text" class="formInput" id="direccion" placeholder="ingresa direccion del cliente"><br>
+                    <input type="submit" id="enviarClientes">
                 </form>
+                
+            </section>
+
+            <section id="listadoClientes" class="contenedor__formClientes">
+
             </section>
             
         </div>

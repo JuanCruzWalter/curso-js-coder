@@ -13,8 +13,8 @@ class Cliente{
         
     }
     confirmarCliente(){
-        let confiramar = `a creado un cliente nuevo, llamado: ${this.nombre} con el id: ${this.id}`;
-        return confiramar;
+        let listadoClientes = document.getElementById("listadoClientes")
+        listadoClientes.innerHTML = `<P> a creado un cliente nuevo, llamado: ${this.nombre } ${this.apellido }, con el id: ${ this.id }<P><br>`;
     }
     borrarCliente(){
         let borrar = false
@@ -23,26 +23,33 @@ class Cliente{
             listaClientes.pop(this.Cliente);
         }
     }
+
    
 }
 const agregarCliente = () => {
-    let id = document.getElementById(id).value;
-    let nombre = document.getElementById(nombre).value;
-    let apellido = document.getElementById(apellido).value;
-    let tieneCuentas = document.getElementById(tieneCuentas).value;
-    let direccion = document.getElementById(direccion).value;
+    let id = document.getElementById("id").value;
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let tieneCuentas = document.getElementById("tieneCuentas").value;
+    let direccion = document.getElementById("direccion").value;
+    
 
     let nuevoCliente = new Cliente (id, nombre, apellido, tieneCuentas, direccion);
     listaClientes.push(nuevoCliente);
+    console.log(listaClientes);
+    nuevoCliente.confirmarCliente();
+   
 }
 
 
+
+
 //creo 3 clientes y 1 por prompt. utilizo un metodo
-let cliente1 = new Cliente(2, "juan", "lopez", true, "ricchieri 2825");
+let cliente1 = new Cliente(2, "juan", "lopez", true, "ricchieri 285");
 let cliente2 = new Cliente(2, "ana", "perez", true, "lugones 234");
 let cliente3 = new Cliente(2, "maria", "sanchez", true, "av valparaiso 225");
-let cliente4 = new Cliente((parseInt(prompt("ingrese numero id"))), prompt("ingrese nombre cliente"), prompt("ingrese apellido cliente"), confirm("tiene cuenta corriente"), prompt("ingrese direccion"));
-console.log(cliente4.confirmarCliente()) 
+let cliente4 = new Cliente(3, "luis", "suarez", true, "calle siempreviva 416");
+ 
 
 
 
@@ -87,10 +94,18 @@ console.log(listaClientes);
 
 
 //utiliso un metodo de clientes para borrar el que se agrega pr prompt
-cliente4.borrarCliente();
+//cliente4.borrarCliente();
 
 
 //llamo la funcion pero no la puedo hacer funcionar
 
-agregarCliente();
 
+
+let formClientes = document.getElementById("formClientes")
+const enviar = document.getElementById("enviarClientes")
+enviar.onclick = (e) => {
+    e.preventDefault();
+    agregarCliente();
+    formClientes.reset();
+    
+}
