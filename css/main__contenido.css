@@ -25,11 +25,6 @@
     font-size: 1.5rem;
     border-bottom: 1px solid rgb(255, 255, 255, 0.3);
     
-    
-    
-    
-    
-    
 }
 .main__contenido--titulo h2{
     font-weight: 700;
@@ -40,3 +35,38 @@
     font-size: 1rem;
 }
 
+
+/* Forms */
+
+.contenedor__formClientes, .contenedor__formProductos, .contenedor__tablaEstilos{
+    padding: 3rem;
+    
+}
+
+.formInput{
+    box-sizing: border-box;
+    padding: .3rem;
+    width: 15rem;
+    height: 2.5rem;
+    margin: 0rem;
+}
+.btn__enviar{
+    padding: .3rem;
+}
+
+
+/* tabla */
+.tablaEstiloTitulos{
+    text-transform: uppercase;
+    font-size: medium;
+    border-collapse: collapse;
+}
+.tablaEstilo{
+   
+    
+    padding:  .5rem 3rem;
+    font-size: small;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+
+}

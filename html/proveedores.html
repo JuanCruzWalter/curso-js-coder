@@ -28,13 +28,11 @@
 
         <div class="main__menuLateral">
 
-            <a href="ventas.html" class="main__menuLateral--btn">Ventas</a>
-            <a href="cuentasCorrientes.html" class="main__menuLateral--btn">Cuentas Corrientes</a>
-            <a href="clientes.html" class="main__menuLateral--btn">Clientes</a>
-            <a href="proveedores.html" class="main__menuLateral--btn">Proveedores</a>
-            <a href="listasDePrecios.html" class="main__menuLateral--btn">Listas de Precios</a>
-            <a href="reparto.html" class="main__menuLateral--btn">Reparto</a>
-            <a href="metricas.html" class="main__menuLateral--btn">Metricas</a>
+            <a href="./ventas.html" class="main__menuLateral--btn">Ventas / Listas de Precios</a>
+            <a href="./clientes.html" class="main__menuLateral--btn">Clientes / Ctas. Ctes.</a>
+            <a href="./proveedores.html" class="main__menuLateral--btn">Productos / stock</a>
+            <a href="./reparto.html" class="main__menuLateral--btn">Reparto</a>
+            <a href="./metricas.html" class="main__menuLateral--btn">Metricas</a>
             
             
         </div>
@@ -44,9 +42,61 @@
             
             <section class="main__contenido--titulo">
                 <h2>
-                    Proveedores
+                    Productos / Proveedores
                 </h2>
             </section>
+
+            <section class="contenedor__formProductos">
+                <form action="" id="formProductos">
+                    <h3>agregar producto</h3>
+                    <br>
+                    
+                    <input type="text" class="formInput" id="nombreProducto" placeholder="ingresa nombre del producto">
+                    <select name="categoria" class="formInput" id="categoriaProducto">
+                        <option value="Harina" class="selectCategoria">Harinas</option>
+                        <option value="Cereales" class="selectCategoria">Cereales</option>
+                        <option value="Balanceados" class="selectCategoria">Balanceados</option>
+                        <option value="Plantas" class="selectCategoria">Plantas</option>
+                        <option value="Otros" class="selectCategoria">Otros</option>
+                    </select>
+                    <input type="text" class="formInput" id="detalle" placeholder="detalle/ descripcion">
+                    <input type="text" class="formInput" id="costo" placeholder="costo"><br>
+                    <input type="text" class="formInput" id="precio" placeholder="precio de venta">
+                    <input type="text" class="formInput" id="stockB" placeholder="stock en blanco">
+                    <input type="text" class="formInput" id="stockN" placeholder="stock en negro"><br>
+                    <input type="submit" id="enviarProductos" class="btn__enviar">
+                </form>
+            </section>    
+            
+            <section class="contenedor__formProductos">
+                <h3>lista de productos</h3>
+                <br>
+                <table class="tabla-productos-precio tablaEstilo">
+                    <tr class="tablaEstilo">
+                        <th class="tablaEstilo tablaEstiloTitulos">id</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">nombre</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">categoria</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">detalle</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">costo</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">precio</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">stockB</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">stockN</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">stockTotal</th>
+                    </tr>
+                    <tr id="mostrarProductos" class="tablaEstilo">
+                        
+                    </tr>
+                </table>
+            </section>
+
+            <section class="contenedor__formProductos">
+                <br>
+                    <h3>agregar stock</h3>
+                    <p>*agregar metodo para agregar stock*</p>
+                    <br>
+            </section>
+
+            
             
         </div>
 
@@ -57,12 +107,10 @@
 
 
 
-    <footer>
-
-    </footer>
+    
 
     <!-- <agregar todos los scripts> -->
     <!-- <script src="./js/main.js"></script> -->
-    
+    <script src="../js/productos.js"></script>
 </body>
 </html>

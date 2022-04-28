@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/main__menu.css">
     <link rel="stylesheet" href="../css/navBar.css">
     <link rel="stylesheet" href="../css/main__contenido.css">
-    <link rel="stylesheet" href="../css/clientes.css">
+    
     
     
     
@@ -30,13 +30,11 @@
 
         <div class="main__menuLateral">
 
-            <a href="ventas.html" class="main__menuLateral--btn">Ventas</a>
-            <a href="cuentasCorrientes.html" class="main__menuLateral--btn">Cuentas Corrientes</a>
-            <a href="clientes.html" class="main__menuLateral--btn">Clientes</a>
-            <a href="proveedores.html" class="main__menuLateral--btn">Proveedores</a>
-            <a href="listasDePrecios.html" class="main__menuLateral--btn">Listas de Precios</a>
-            <a href="reparto.html" class="main__menuLateral--btn">Reparto</a>
-            <a href="metricas.html" class="main__menuLateral--btn">Metricas</a>
+            <a href="./ventas.html" class="main__menuLateral--btn">Ventas / Listas de Precios</a>
+            <a href="./clientes.html" class="main__menuLateral--btn">Clientes / Ctas. Ctes.</a>
+            <a href="./proveedores.html" class="main__menuLateral--btn">Productos / stock</a>
+            <a href="./reparto.html" class="main__menuLateral--btn">Reparto</a>
+            <a href="./metricas.html" class="main__menuLateral--btn">Metricas</a>
             
             
         </div>
@@ -49,26 +47,33 @@
                 <h2>
                     Clientes
                 </h2>
-                
             </section>
+
             <section class="contenedor__formClientes">
                 <form action="" id="formClientes">
                     <h3>agregar clientes</h3>
                     <br>
-                    <br>
                     
-                    <input type="text" class="formInput" id="id" placeholder=" ingresa un nuevo id para el cliente"><br>
-                    <input type="text" class="formInput" id="nombre" placeholder="ingresa nombre del nuevo cliente"><br>
-                    <input type="text" class="formInput" id="apellido" placeholder=" ingresa apellido del nuevo cliente"><br>
-                    <input type="text" class="formInput" id="tieneCuentas" placeholder="tiene cuenta corriente?"><br>
+                    <input type="text" class="formInput" id="nombre" placeholder="ingresa nombre del nuevo cliente">
+                    <input type="text" class="formInput" id="apellido" placeholder=" ingresa apellido del nuevo cliente">
                     <input type="text" class="formInput" id="direccion" placeholder="ingresa direccion del cliente"><br>
-                    <input type="submit" id="enviarClientes">
+                    <input type="submit" id="enviarClientes" class="btn__enviar">
                 </form>
                 
             </section>
 
-            <section id="listadoClientes" class="contenedor__formClientes">
-
+            <section  class="contenedor__tablaEstilos">
+                <button id="btnLimpiar">limpiar storage</button>
+                <table id="listadoClientes">
+                    <tr class="tablaEstilo">
+                        <th class="tablaEstilo tablaEstiloTitulos">ID</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">NOMBRE</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">APELLIDO</th>
+                        <th class="tablaEstilo tablaEstiloTitulos">DIRECCION</th>
+                        
+                    </tr>
+                    
+                </table>
             </section>
             
         </div>
@@ -89,6 +94,6 @@
     <script src="./js/main.js"></script>
     
     -->
-    <script src="../js/constructor.js"></script>
+    <script src="../js/clientes.js"></script>
 </body>
 </html>

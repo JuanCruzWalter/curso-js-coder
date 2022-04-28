@@ -22,7 +22,7 @@
     background: linear-gradient(0deg, rgba(0,47,87,1) 0%, rgba(0,16,34,1) 100%);
     
     grid-column: 1/2;
-    height: calc(100vh - 7rem);
+    height: 100vh;
     text-decoration: none;
     padding-top: 5rem;
    
