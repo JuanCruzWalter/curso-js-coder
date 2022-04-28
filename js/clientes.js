@@ -42,12 +42,13 @@ const agregarCliente = () => {
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let direccion = document.getElementById("direccion").value;
+    
+
     let nuevoCliente = new Cliente (id, nombre, apellido, direccion);
     listaClientes.push(nuevoCliente);
-
     localStorage.setItem("listadoClient",JSON.stringify(listaClientes))
     nuevoCliente.imprimirClienteNuevo();
-    //nuevoCliente.confirmarCliente();
+    nuevoCliente.confirmarCliente();
     crearNuevaCuenta(nuevoCliente.id);   
 }
 
@@ -55,12 +56,13 @@ const agregarCliente = () => {
 
 let formClientes = document.getElementById("formClientes")
 const enviar = document.getElementById("enviarClientes")
-enviar.onclick = (e) => {  
+enviar.onclick = (e) => {
     e.preventDefault();
+    agregarCliente();
+   
     formClientes.reset();
-    agregarCliente();   
+    
 }
-
 //evento limpiar storage
 let btnLimpiar = document.getElementById("btnLimpiar")
 btnLimpiar.onclick = () => { 
