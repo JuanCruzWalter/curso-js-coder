@@ -11,10 +11,16 @@ class Cliente{
     }
     confirmarCliente(){
         
-        alert(`creaste el cliente ${this.apellido + ", " +this.nombre} exitosamente`)   
+        swal ({
+            title: "OK",
+            text: "el cliente se agrego correctamente a la lista",
+            icon: "success",
+            button: "ok",
+          });   
     }
 
     imprimirClienteNuevo(){
+        
         let listadoClientes = document.getElementById("listadoClientes");
         listaClientes.forEach( obj => {
             listadoClientes.innerHTML += `<tr><td class="tablaEstilo"> ${obj.id} </td><td class="tablaEstilo"> ${obj.nombre} </td><td class="tablaEstilo"> ${obj.apellido} </td><td class="tablaEstilo"> ${obj.direccion} </td></tr>`;
@@ -37,20 +43,44 @@ class Cliente{
 }
 
 
-const agregarCliente = () => {
-    let id = listaClientes.length + 10000;
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let direccion = document.getElementById("direccion").value;
+const agregarCliente = (nombre, apellido, direccion) => {
     
-
+    let id = listaClientes.length + 10000;
     let nuevoCliente = new Cliente (id, nombre, apellido, direccion);
+    //
     listaClientes.push(nuevoCliente);
     localStorage.setItem("listadoClient",JSON.stringify(listaClientes))
     nuevoCliente.imprimirClienteNuevo();
     nuevoCliente.confirmarCliente();
-    crearNuevaCuenta(nuevoCliente.id);   
+    crearNuevaCuenta(nuevoCliente.id);
+    formClientes.reset();   
 }
+//haciendo validaciones del form
+
+const validarFormCliente  = () => {
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let direccion = document.getElementById("direccion").value;
+
+    nombre !== "" ?  nombre : sAlertError();
+    apellido !== "" ?  apellido : sAlertError();
+    direccion !== "" ?  direccion : sAlertError();
+    nombre && apellido && direccion && agregarCliente(nombre, apellido, direccion);
+}
+ 
+
+// USO sweet alert -- intente pasarlle parametros para no repetir codigo, pero no pude
+const sAlertError = () => {
+    swal ({
+    title: "Error",
+    text: "faltan campos por completar",
+    icon: "error",
+    button: "completar campo",
+  });
+}
+// fin seet alert
+
+
 
 //evento para crear un cliente y una cuenta asociada a el
 
@@ -58,15 +88,14 @@ let formClientes = document.getElementById("formClientes")
 const enviar = document.getElementById("enviarClientes")
 enviar.onclick = (e) => {
     e.preventDefault();
-    agregarCliente();
-   
-    formClientes.reset();
+    validarFormCliente();
     
 }
 //evento limpiar storage
 let btnLimpiar = document.getElementById("btnLimpiar")
 btnLimpiar.onclick = () => { 
     localStorage.clear();
+    location.reload();
 }
 
 
