@@ -70,3 +70,8 @@
     border-collapse: collapse;
 
 }
+h5{
+    color: red;
+    max-width: 40%;
+    font-size: medium;
+}

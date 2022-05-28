@@ -135,12 +135,12 @@ let listadoClientes = document.getElementById("listadoClientes");
 
 let mostrarClientesGuardados =()=>{
     fetch("../clientes.json")
-        .then(response => response.json)
-        .then(resp => JSON.parse(resp))
+        .then(response => response.json())
+        //.then(resp => JSON.parse(resp))
         .then((resp) => {
             let clientes = resp;
             clientes.forEach(obj => {
-                listadoClientes.innerHTML += `<tr><td class="tablaEstilo"> xf4rs2a </td><td class="tablaEstilo"> ${obj.nombre} </td><td class="tablaEstilo"> ${obj.apellido} </td><td class="tablaEstilo"> ${obj.direccion} </td></tr>`;
+                listadoClientes.innerHTML += `<tr><td class="tablaEstilo"> ${obj.id} </td><td class="tablaEstilo"> ${obj.nombre} </td><td class="tablaEstilo"> ${obj.apellido} </td><td class="tablaEstilo"> ${obj.direccion} </td></tr>`;
             }
 
             )
@@ -152,6 +152,8 @@ let Z = document.getElementById("Z")
 Z.onclick = (e) => {
     e.preventDefault();
     mostrarClientesGuardados();
+    
+    
      
 }
 

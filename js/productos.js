@@ -27,9 +27,11 @@ const agregarProducto = () =>{
     let stockBlanco = document.getElementById("stockB").value;
     let stockNegro = document.getElementById("stockN").value;
     let stockReal = parseInt( stockBlanco)+parseInt( stockNegro)
+
     //creo producto nuevo y lo agrego a la lista con inner
     let nuevoProducto = new Producto (id, nombre, categoria, detalle, costo,  precio, stockBlanco, stockNegro, stockReal);
     listaProductos.push(nuevoProducto);
+    
     //hacer una funcion que me agregue a cada producto
     let mostrarProductos = document.getElementById("mostrarProductos");
     mostrarProductos.innerHTML =`
@@ -52,7 +54,7 @@ const enviar = document.getElementById("enviarProductos")
 enviar.onclick = (e) => {
     e.preventDefault();
     agregarProducto();
-    form.reset();
+    //form.reset();
     
 }
 
